@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms & Conditions — SunSync</title>
+  <meta name="description" content="Terms and Conditions for the SunSync iOS app." />
+  <meta name="theme-color" content="#FF8A1F" />
+  <style>
+    :root{
+      --bg:#FFF7EF;
+      --bg-2:#FFE7C7;
+      --primary:#FF8A1F;
+      --primary-2:#FFB347;
+      --accent:#3A73FF;
+      --accent-2:#6AA8FF;
+      --sun:#FFD75E;
+      --deep:#A3122F;
+      --text:#1A1A1A;
+      --muted:rgba(26,26,26,.70);
+      --card:rgba(255,255,255,.72);
+      --border:rgba(26,26,26,.10);
+      --shadow:0 18px 50px rgba(163,18,47,.12);
+      --radius-lg:28px;
+      --max:980px;
+    }
+
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      line-height:1.6;
+      background:
+        radial-gradient(1200px 520px at 50% -10%, rgba(255,215,94,.85), transparent 44%),
+        radial-gradient(900px 420px at 15% 5%, rgba(106,168,255,.35), transparent 48%),
+        radial-gradient(900px 460px at 85% 0%, rgba(58,115,255,.32), transparent 48%),
+        linear-gradient(180deg, #5D8FFF 0%, #8FC0FF 18%, #FFD7A1 45%, #FF9F43 65%, #E64A3B 82%, #A3122F 100%);
+      background-attachment: fixed;
+    }
+
+    a{ color:inherit; }
+    a:hover{ text-decoration-thickness:2px; }
+
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter:blur(16px);
+      background:rgba(255,247,239,.62);
+      border-bottom:1px solid rgba(255,255,255,.25);
+    }
+    .nav .inner,
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding-left:24px;
+      padding-right:24px;
+    }
+    .nav .inner{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      gap:14px;
+      padding-top:14px;
+      padding-bottom:14px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand-logo{
+      width:38px;
+      height:38px;
+      border-radius:12px;
+      object-fit:cover;
+      box-shadow:0 10px 26px rgba(58,115,255,.22);
+      border:1px solid rgba(255,255,255,.55);
+      flex:0 0 auto;
+    }
+    .brand h1{
+      margin:0;
+      font-size:18px;
+      letter-spacing:-0.03em;
+      line-height:1;
+    }
+    .brand p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1;
+      font-weight:600;
+    }
+
+    .wrap{ padding-top:28px; padding-bottom:34px; }
+
+    .hero,
+    .section,
+    .footer{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.30);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius-lg);
+    }
+
+    .hero{
+      padding:28px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto -50px -80px auto;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(255,215,94,.55) 0%, rgba(255,138,31,.16) 45%, transparent 72%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.52);
+      border:1px solid rgba(255,138,31,.22);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.01em;
+      color:#8A3A00;
+    }
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:linear-gradient(180deg, var(--sun), var(--primary));
+      box-shadow:0 0 14px rgba(255,138,31,.8);
+    }
+
+    .hero h2{
+      margin:14px 0 10px;
+      font-size:clamp(30px, 4vw, 46px);
+      line-height:1.02;
+      letter-spacing:-0.04em;
+      max-width:720px;
+    }
+    .hero p{
+      margin:0;
+      max-width:740px;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .meta{
+      margin-top:18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .meta-chip{
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.58);
+      border:1px solid rgba(26,26,26,.08);
+      font-size:13px;
+      font-weight:700;
+      color:rgba(26,26,26,.78);
+    }
+
+    .grid{
+      display:grid;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .section{ padding:22px; }
+    .section h3{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-0.02em;
+    }
+    .section p{ margin:0 0 10px; color:var(--muted); }
+    .section ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .section li{ margin:7px 0; }
+    .callout{
+      margin-top:12px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,248,230,.92), rgba(255,255,255,.78));
+      border:1px solid rgba(255,179,71,.35);
+      color:#6A3400;
+      font-size:14px;
+    }
+    .callout strong{ color:#4D2200; }
+
+    .footer{
+      margin-top:16px;
+      padding:20px 22px;
+      color:rgba(26,26,26,.72);
+      font-size:13px;
+    }
+    .footer-inner{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .footer-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .footer-links a{ font-weight:700; }
+
+    code.inline{
+      background:rgba(58,115,255,.08);
+      padding:2px 6px;
+      border-radius:8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size:.95em;
+    }
+
+    @media (max-width:760px){
+      .nav .inner, .wrap{ padding-left:18px; padding-right:18px; }
+      .hero, .section, .footer{ border-radius:24px; }
+      .hero, .section{ padding:20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/icon.png" alt="SunSync logo" />
+        <div>
+          <h1>SunSync</h1>
+          <p>Terms & Conditions</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="hero" id="acceptance">
+      <div class="eyebrow"><span class="dot"></span> Last updated: April 2026</div>
+      <h2>Terms & Conditions — SunSync</h2>
+      <p>
+        These Terms & Conditions govern your use of the SunSync iOS app. By downloading, accessing, or using SunSync, you agree to these terms.
+      </p>
+      <div class="meta">
+        <div class="meta-chip">Wellness app</div>
+        <div class="meta-chip">No medical advice</div>
+        <div class="meta-chip">Apple-managed purchases</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="section">
+        <h3>1. Acceptance of Terms</h3>
+        <p>By using SunSync, you agree to be bound by these Terms & Conditions. If you do not agree, please do not use the app.</p>
+      </section>
+
+      <section class="section" id="purpose">
+        <h3>2. Purpose of the App</h3>
+        <p>SunSync is a wellness and lifestyle app designed to help users better understand daily light exposure, routines, and circadian-aligned habits.</p>
+        <p>SunSync is provided for general informational and self-tracking purposes only.</p>
+        <div class="callout"><strong>Important:</strong> SunSync does not provide medical advice, diagnosis, treatment, or professional healthcare guidance. Any information, reminders, estimates, or suggestions in the app should not be used as a substitute for advice from a qualified professional.</div>
+      </section>
+
+      <section class="section">
+        <h3>3. User Responsibilities</h3>
+        <p>You agree to use SunSync lawfully and responsibly. You are responsible for:</p>
+        <ul>
+          <li>the accuracy of any information you enter into the app,</li>
+          <li>your own decisions, routines, and actions based on app content or insights,</li>
+          <li>keeping your device and access credentials secure, where applicable.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>4. App Availability and Features</h3>
+        <p>We may update, modify, suspend, or discontinue any feature of SunSync at any time, with or without notice.</p>
+        <p>We do not guarantee that every feature will always be available, uninterrupted, or error-free.</p>
+      </section>
+
+      <section class="section">
+        <h3>5. Data and Local Storage</h3>
+        <p>SunSync may store certain app data locally on your device in order to provide its functionality.</p>
+        <p>You understand that deleting the app, changing devices, operating system issues, or device malfunction may result in the loss of locally stored information.</p>
+      </section>
+
+      <section class="section">
+        <h3>6. Notifications</h3>
+        <p>If you enable reminders or alerts, SunSync may send local notifications to your device.</p>
+        <p>You can disable notifications at any time through your system settings.</p>
+      </section>
+
+      <section class="section" id="payments">
+        <h3>7. Paid Features, Subscriptions, and Billing</h3>
+        <p>SunSync may offer optional premium features, subscriptions, or one-time purchases.</p>
+        <ul>
+          <li>All purchases are processed by Apple through the App Store.</li>
+          <li>Billing, renewal, cancellation, and refund handling are governed by Apple’s systems and policies.</li>
+          <li>We do not directly process payment card details.</li>
+        </ul>
+        <p>If SunSync includes auto-renewable subscriptions, those subscriptions renew automatically unless cancelled through your Apple account settings before the renewal date.</p>
+      </section>
+
+      <section class="section">
+        <h3>8. Intellectual Property</h3>
+        <p>SunSync, including its design, branding, text, visuals, code, and related content, is owned by the app creator or licensed to the app creator, unless otherwise stated.</p>
+        <p>You may not copy, reproduce, modify, distribute, resell, or reverse engineer any part of the app except as permitted by applicable law.</p>
+      </section>
+
+      <section class="section">
+        <h3>9. Prohibited Use</h3>
+        <p>You agree not to use SunSync to:</p>
+        <ul>
+          <li>violate applicable laws or regulations,</li>
+          <li>interfere with the app’s normal operation,</li>
+          <li>attempt unauthorized access to systems, code, or services related to the app,</li>
+          <li>misuse, copy, or exploit the app beyond its intended personal use.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3>10. Disclaimers</h3>
+        <p>SunSync is provided on an <code class="inline">as is</code> and <code class="inline">as available</code> basis to the maximum extent permitted by law.</p>
+        <p>We make no warranties or guarantees regarding accuracy, reliability, availability, fitness for a particular purpose, or uninterrupted access.</p>
+      </section>
+
+      <section class="section">
+        <h3>11. Limitation of Liability</h3>
+        <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, profits, business, health-related outcomes, or goodwill arising from your use of, or inability to use, SunSync.</p>
+      </section>
+
+      <section class="section">
+        <h3>12. Changes to These Terms</h3>
+        <p>We may update these Terms & Conditions from time to time. Continued use of SunSync after updated terms become effective constitutes acceptance of the revised terms.</p>
+      </section>
+
+      <section class="section">
+        <h3>13. Governing Law</h3>
+        <p>These Terms & Conditions are governed by the laws applicable in your jurisdiction, unless otherwise required by mandatory consumer protection law.</p>
+        <div class="callout"><strong>Optional:</strong> if you want, this section can be tightened later with your exact governing law and forum, for example Spain / Basque Country, depending on how formal you want the legal text to be.</div>
+      </section>
+
+      <section class="section" id="contact">
+        <h3>14. Contact</h3>
+        <p>If you have any questions about these Terms & Conditions, you can contact:</p>
+        <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+        <div class="callout"><strong>Before publishing:</strong> replace the contact email and review whether you want to make the governing law clause more specific.</div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div><strong>SunSync</strong> · © <span id="year"></span></div>
+        <div class="footer-links">
+          <a href="#acceptance">Top</a>
+          <a href="mailto:your@email.com">Support</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
