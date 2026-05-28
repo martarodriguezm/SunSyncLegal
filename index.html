@@ -3,115 +3,544 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SunSync</title>
-  <meta name="description" content="SunSync legal pages." />
+  <title>SunSync — Circadian Rhythm</title>
+  <meta name="description" content="Sync your circadian rhythm with sunlight exposure. Sun, vitamin D and sleep." />
   <meta name="theme-color" content="#FF8A1F" />
+  <meta property="og:title" content="SunSync — Circadian Rhythm" />
+  <meta property="og:description" content="Sync your circadian rhythm with sunlight exposure. Sun, vitamin D and sleep." />
+  <meta property="og:image" content="assets/icon.png" />
   <style>
-    :root{
-      --text:#1A1A1A;
-      --muted:rgba(26,26,26,.72);
-      --card:rgba(255,255,255,.76);
-      --shadow:0 18px 50px rgba(163,18,47,.12);
-      --max:980px;
+    :root {
+      --text: #1A1A1A;
+      --muted: rgba(26,26,26,.62);
+      --glass: rgba(255,255,255,.72);
+      --glass-light: rgba(255,255,255,.50);
+      --border: rgba(255,255,255,.34);
+      --shadow: 0 20px 60px rgba(90,20,10,.13);
+      --max: 960px;
+      --r: 28px;
     }
 
-    *{ box-sizing:border-box; }
-    html, body{ height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      line-height:1.6;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
       background:
         radial-gradient(1200px 520px at 50% -10%, rgba(255,215,94,.85), transparent 44%),
         radial-gradient(900px 420px at 15% 5%, rgba(106,168,255,.35), transparent 48%),
         radial-gradient(900px 460px at 85% 0%, rgba(58,115,255,.32), transparent 48%),
         linear-gradient(180deg, #5D8FFF 0%, #8FC0FF 18%, #FFD7A1 45%, #FF9F43 65%, #E64A3B 82%, #A3122F 100%);
-      background-attachment:fixed;
+      background-attachment: fixed;
     }
 
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:28px 24px 34px;
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    .hero{
-      background:var(--card);
-      border:1px solid rgba(255,255,255,.30);
-      box-shadow:var(--shadow);
-      border-radius:28px;
-      padding:30px;
+    .card {
+      background: var(--glass);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    .brand-logo{
-      width:42px;
-      height:42px;
-      border-radius:12px;
-      object-fit:cover;
-      box-shadow:0 10px 26px rgba(58,115,255,.22);
-      border:1px solid rgba(255,255,255,.55);
-      flex:0 0 auto;
-    }
-    h1{
-      margin:0;
-      font-size:32px;
-      letter-spacing:-0.03em;
-      line-height:1.05;
-    }
-    p{
-      margin:10px 0 0;
-      color:var(--muted);
-      max-width:680px;
+    /* ── HERO ── */
+    .hero {
+      padding: 54px 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
     }
 
-    .links{
-      margin-top:24px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
-    .links a{
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
-      padding:10px 14px;
-      border-radius:999px;
-      color:rgba(26,26,26,.86);
-      background:rgba(255,255,255,.56);
-      border:1px solid rgba(26,26,26,.08);
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 8px 28px rgba(58,115,255,.24);
+      border: 1px solid rgba(255,255,255,.6);
     }
-    .links a:hover{
-      background:rgba(255,255,255,.72);
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
-    @media (max-width:760px){
-      .wrap{ padding:20px 18px 24px; }
-      .hero{ border-radius:24px; padding:22px; }
-      h1{ font-size:28px; }
+    .hero-headline {
+      font-size: clamp(38px, 5.5vw, 64px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+      max-width: 620px;
+    }
+    .hero-headline span {
+      background: linear-gradient(130deg, #FF8A1F 20%, #E64A3B 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.58;
+    }
+
+    .btn-appstore {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      background: #1A1A1A;
+      color: #fff;
+      border-radius: 18px;
+      padding: 14px 26px;
+      text-decoration: none;
+      box-shadow: 0 8px 28px rgba(26,26,26,.26);
+      transition: opacity .16s, transform .16s;
+    }
+    .btn-appstore:hover {
+      opacity: .86;
+      transform: translateY(-2px);
+    }
+    .btn-appstore svg {
+      width: 26px;
+      height: 26px;
+      flex: 0 0 auto;
+    }
+    .btn-appstore-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn-appstore-text small {
+      font-size: 11px;
+      opacity: .65;
+      letter-spacing: .02em;
+      line-height: 1;
+    }
+    .btn-appstore-text strong {
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .stat {
+      padding: 30px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .stat-num {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ── FEATURES ── */
+    .features-wrap {
+      padding: 44px 52px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(26,26,26,.42);
+      margin-bottom: 6px;
+    }
+    .section-h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .feature {
+      background: var(--glass-light);
+      border: 1px solid rgba(255,255,255,.42);
+      border-radius: 20px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .feature-icon { font-size: 28px; line-height: 1; }
+    .feature-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .feature-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.52;
+    }
+
+    /* ── SCREENSHOTS ── */
+    .screenshots-wrap {
+      padding: 44px 52px;
+      overflow: hidden;
+    }
+    .screenshots-scroll {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshot-item {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: calc((100% - 32px) / 3);
+    }
+    .screenshot-frame {
+      width: 100%;
+      aspect-ratio: 9 / 19.5;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(20,10,5,.14);
+      border: 1px solid rgba(255,255,255,.5);
+      background: rgba(255,255,255,.2);
+    }
+    .screenshot-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 760px) {
+      .screenshots-wrap { padding: 32px 24px; }
+      .screenshot-item { width: 62vw; }
+    }
+    @media (max-width: 480px) {
+      .screenshot-item { width: 72vw; }
+    }
+
+    /* ── QUOTE ── */
+    .quote {
+      padding: 56px 52px;
+      background: rgba(20,14,10,.82);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-color: rgba(255,255,255,.08);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .quote-text {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.35;
+      color: #fff;
+      max-width: 600px;
+    }
+    .quote-text em {
+      font-style: normal;
+      color: #FF9F43;
+    }
+    .quote-attr {
+      font-size: 13px;
+      color: rgba(255,255,255,.4);
+    }
+
+    /* ── ROUTINE ── */
+    .routine-wrap {
+      padding: 44px 52px;
+    }
+    .routine-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .step {
+      background: var(--glass-light);
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 20px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .step-time {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(26,26,26,.4);
+    }
+    .step-icon { font-size: 24px; line-height: 1; }
+    .step-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.46;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      padding: 56px 52px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .cta-h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+    .cta-sub {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 380px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 4px 0 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+    footer a {
+      color: rgba(255,255,255,.8);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    footer a:hover { color: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 760px) {
+      .wrap { padding: 22px 14px 44px; gap: 14px; }
+      .hero { padding: 36px 28px; gap: 24px; }
+      .features-wrap, .routine-wrap, .cta { padding: 32px 24px; }
+      .quote { padding: 44px 28px; }
+      .stats { grid-template-columns: 1fr; gap: 10px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .routine-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .routine-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="hero">
+
+    <!-- HERO -->
+    <section class="card hero">
       <div class="brand">
-        <img class="brand-logo" src="assets/icon.png" alt="SunSync logo" />
-        <h1>SunSync</h1>
+        <img class="brand-logo" src="assets/icon.png" alt="SunSync" />
+        <span class="brand-name">SunSync</span>
       </div>
-      <p>
-        Welcome to SunSync.
+      <h1 class="hero-headline">
+        Align your day with<br/><span>your natural rhythm</span>
+      </h1>
+      <p class="hero-sub">
+        Your body already knows when to wake, move, and rest. SunSync connects you with sunlight to improve your energy, vitamin D, and sleep.
       </p>
-      <div class="links">
+      <a class="btn-appstore" href="https://apps.apple.com/es/app/sunsync-ritmo-circadiano/id6762293528">
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+        </svg>
+        <div class="btn-appstore-text">
+          <small>Download on the</small>
+          <strong>App Store</strong>
+        </div>
+      </a>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="card stat">
+        <span class="stat-num">+20%</span>
+        <span class="stat-label">better sleep quality with just 5 minutes of morning sunlight</span>
+      </div>
+      <div class="card stat">
+        <span class="stat-num">24h</span>
+        <span class="stat-label">circadian cycle that can't be overridden, only synchronized</span>
+      </div>
+      <div class="card stat">
+        <span class="stat-num">90%</span>
+        <span class="stat-label">of our time is spent indoors, away from natural light</span>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="card features-wrap">
+      <p class="eyebrow">What SunSync tracks</p>
+      <h2 class="section-h2">Everything your circadian rhythm needs</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <span class="feature-icon">☀️</span>
+          <span class="feature-title">Sunlight exposure</span>
+          <p class="feature-desc">Log your minutes of light, check the UV index, and discover your optimal sun windows throughout the day.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">💊</span>
+          <span class="feature-title">Vitamin D</span>
+          <p class="feature-desc">Personalised estimates based on your skin type and location. Track your daily supplements too.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🌙</span>
+          <span class="feature-title">Sleep & melatonin</span>
+          <p class="feature-desc">Log your sleep, build routines to boost melatonin production, and reduce artificial light at night.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">📊</span>
+          <span class="feature-title">Circadian insights</span>
+          <p class="feature-desc">Personalised analysis, long-term history, and a home screen widget to keep everything at a glance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="card screenshots-wrap">
+      <p class="eyebrow">See it in action</p>
+      <h2 class="section-h2">Designed around your day</h2>
+      <div class="screenshots-scroll">
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="assets/screenshot1.png" alt="SunSync home screen" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="assets/screenshot2.png" alt="Vitamin D tracking" />
+          </div>
+        </div>
+        <div class="screenshot-item">
+          <div class="screenshot-frame">
+            <img src="assets/screenshot3.png" alt="Circadian insights" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <blockquote class="card quote">
+      <p class="quote-text">
+        Most people don't have a sleep problem.<br/>
+        They have a <em>light problem</em>.<br/>
+        Fix the light, and sleep follows.
+      </p>
+      <p class="quote-attr">— The principle behind SunSync</p>
+    </blockquote>
+
+    <!-- ROUTINE -->
+    <section class="card routine-wrap">
+      <p class="eyebrow">The daily practice</p>
+      <h2 class="section-h2">Four moments that change everything</h2>
+      <div class="routine-grid">
+        <div class="step">
+          <span class="step-time">Dawn</span>
+          <span class="step-icon">🌅</span>
+          <span class="step-title">5 minutes of sun</span>
+          <p class="step-desc">Morning light resets your internal clock and activates the day's energy.</p>
+        </div>
+        <div class="step">
+          <span class="step-time">Midday</span>
+          <span class="step-icon">⚡</span>
+          <span class="step-title">Energy window</span>
+          <p class="step-desc">Protect your peak solar exposure for vitamin D and maximum performance.</p>
+        </div>
+        <div class="step">
+          <span class="step-time">Evening</span>
+          <span class="step-icon">🕯️</span>
+          <span class="step-title">Less blue light</span>
+          <p class="step-desc">Dim screens and artificial lighting to let melatonin build naturally.</p>
+        </div>
+        <div class="step">
+          <span class="step-time">Night</span>
+          <span class="step-icon">🌑</span>
+          <span class="step-title">Natural rest</span>
+          <p class="step-desc">Full darkness so your body rests at the rhythm it was designed for.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="card cta">
+      <h2 class="cta-h2">Start today, for free</h2>
+      <p class="cta-sub">Available for iPhone. No subscription needed to get started.</p>
+      <a class="btn-appstore" href="https://apps.apple.com/es/app/sunsync-ritmo-circadiano/id6762293528">
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/>
+        </svg>
+        <div class="btn-appstore-text">
+          <small>Download on the</small>
+          <strong>App Store</strong>
+        </div>
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-links">
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
       </div>
-    </section>
+      <span>© 2026 Marta Rodriguez · SunSync</span>
+    </footer>
+
   </main>
 </body>
 </html>
