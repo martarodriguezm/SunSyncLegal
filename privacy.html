@@ -250,7 +250,7 @@
 
   <main class="wrap">
     <header class="hero" id="overview">
-      <div class="eyebrow"><span class="dot"></span> Last updated: April 2026</div>
+      <div class="eyebrow"><span class="dot"></span> Last updated: October 2026</div>
       <h2>Privacy Policy — SunSync</h2>
       <p>
         SunSync respects your privacy. This Privacy Policy explains what information may be processed when you use the SunSync iOS app and how that information is handled.
@@ -286,17 +286,20 @@
         <p>Some SunSync features may request access to device capabilities only when needed for core functionality.</p>
         <ul>
           <li><strong>Notifications:</strong> if you enable reminders, SunSync may send local notifications on your device.</li>
-          <li><strong>Location:</strong> if SunSync uses location-based sunrise, sunset, or daylight calculations, location access is used only to provide those features. If the app does not use location, remove this sentence.</li>
-          <li><strong>Health or wellness integrations:</strong> if SunSync later integrates with Apple Health or similar services, that usage should be described here separately and accurately.</li>
+          <li><strong>Location:</strong> SunSync uses your location to calculate sunrise and sunset times, daylight windows, and personalised vitamin D estimates. Location is used only to provide these features and is not used for tracking or advertising.</li>
+          <li><strong>Apple Health:</strong> with your permission, SunSync reads your <em>Time in Daylight</em> data from the Health app to show your daily light exposure. SunSync only reads this data; it does not write anything to Health.</li>
         </ul>
-        <p>You can manage permissions at any time in your iPhone or iPad settings.</p>
+        <div class="callout">
+          <strong>Your Health data never leaves your device.</strong> Time in Daylight data read from Apple Health is processed only on your device. It is not sent to our servers, to Firebase, or to any other third party, and it is never used for advertising or marketing.
+        </div>
+        <p>You can manage permissions at any time in your iPhone or iPad settings, and revoke SunSync's access to Health data in the Health app.</p>
       </section>
 
       <section class="section">
         <h3>4. Analytics and diagnostics</h3>
-        <p>SunSync may use privacy-friendly analytics or crash reporting tools to understand app performance, stability, and feature usage.</p>
-        <p>These tools may collect limited technical information such as device type, operating system version, app version, and crash diagnostics.</p>
-        <p>If you do not use any analytics or crash reporting service, replace this section with a simple statement saying that no analytics are collected.</p>
+        <p>SunSync uses Firebase, a service provided by Google, for analytics and crash reporting to understand app performance, stability, and feature usage.</p>
+        <p>Firebase may collect limited technical information such as device type, operating system version, app version, app usage events, and crash diagnostics. This information is not used to identify you personally. For more details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy information</a>.</p>
+        <p>No data from Apple Health is ever included in analytics, crash reports, or any data sent to Firebase.</p>
       </section>
 
       <section class="section">
@@ -338,7 +341,7 @@
       <section class="section" id="contact">
         <h3>10. Contact</h3>
         <p>If you have questions about this Privacy Policy, you can contact:</p>
-        <p><strong>Email:</strong> <a href="sunsyncapp@gmail.com">sunsyncapp@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="mailto:sunsyncapp@gmail.com">sunsyncapp@gmail.com</a></p>
       </section>
     </div>
 
@@ -347,7 +350,7 @@
         <div><strong>SunSync</strong> · © <span id="year"></span></div>
         <div class="footer-links">
           <a href="#overview">Top</a>
-          <a href="mailto:your@email.com">Support</a>
+          <a href="mailto:sunsyncapp@gmail.com">Support</a>
         </div>
       </div>
     </footer>
