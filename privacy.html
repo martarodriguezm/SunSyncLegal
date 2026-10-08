@@ -253,94 +253,129 @@
       <div class="eyebrow"><span class="dot"></span> Last updated: October 2026</div>
       <h2>Privacy Policy — SunSync</h2>
       <p>
-        SunSync respects your privacy. This Privacy Policy explains what information may be processed when you use the SunSync iOS app and how that information is handled.
+        SunSync respects your privacy. This Privacy Policy explains what information is processed when you use the SunSync iOS app, why, who it is shared with, and the rights you have over it.
       </p>
       <div class="meta">
         <div class="meta-chip">No account required</div>
-        <div class="meta-chip">Designed for on-device use</div>
+        <div class="meta-chip">Your data stays on your device</div>
+        <div class="meta-chip">Health data never leaves your device</div>
         <div class="meta-chip">No sale of personal data</div>
       </div>
     </header>
 
     <div class="grid">
+      <section class="section" id="controller">
+        <h3>1. Who is responsible for your data</h3>
+        <p>SunSync is developed and published by Marta Rodríguez, an independent developer based in Spain, who is the data controller for the processing described in this policy.</p>
+        <p>For any privacy question or request, contact <a href="mailto:sunsyncapp@gmail.com">sunsyncapp@gmail.com</a>.</p>
+      </section>
+
       <section class="section" id="data">
-        <h3>1. Information stored in the app</h3>
-        <p>SunSync is designed to work primarily on your device. Depending on the features you use, the app may store information such as:</p>
+        <h3>2. Information stored on your device</h3>
+        <p>SunSync is designed to work on your device. Depending on the features you use, the app stores:</p>
         <ul>
-          <li>your preferences and app settings,</li>
-          <li>light exposure logs or daily activity entries you choose to save,</li>
-          <li>sleep-related, energy-related, or routine-related inputs you manually add,</li>
-          <li>notification preferences and reminder settings.</li>
+          <li>your profile settings: skin type, age range, weight, height, sun-exposure preferences and daily vitamin D target,</li>
+          <li>the sun sessions you record (live or added afterwards), including their duration, estimated vitamin D and any notes you write,</li>
+          <li>the supplements you log,</li>
+          <li>the sunrises you mark as seen,</li>
+          <li>notification preferences, bedtime and other app settings.</li>
         </ul>
-        <p>This information is stored locally on your device unless a specific feature clearly states otherwise.</p>
+        <p>This information is stored only on your device. It is not uploaded to our servers or to any third party, and SunSync has no access to it.</p>
       </section>
 
       <section class="section">
-        <h3>2. Personal information</h3>
-        <p>SunSync does not require you to create an account in order to use the core app experience.</p>
-        <p>SunSync does not intentionally collect directly identifying information such as your name, email address, postal address, or phone number unless you voluntarily provide it, for example when contacting support.</p>
+        <h3>3. Personal information</h3>
+        <p>SunSync does not require you to create an account.</p>
+        <p>SunSync does not collect directly identifying information such as your name, email address, postal address or phone number, unless you voluntarily provide it, for example when contacting support by email.</p>
       </section>
 
       <section class="section" id="permissions">
-        <h3>3. Device permissions and app functionality</h3>
-        <p>Some SunSync features may request access to device capabilities only when needed for core functionality.</p>
+        <h3>4. Device permissions and app functionality</h3>
+        <p>SunSync only asks for access to device capabilities when they are needed for a feature. Each one is optional.</p>
         <ul>
-          <li><strong>Notifications:</strong> if you enable reminders, SunSync may send local notifications on your device.</li>
-          <li><strong>Location:</strong> SunSync uses your location to calculate sunrise and sunset times, daylight windows, and personalised vitamin D estimates. Location is used only to provide these features and is not used for tracking or advertising.</li>
-          <li><strong>Apple Health:</strong> with your permission, SunSync reads your <em>Time in Daylight</em> data from the Health app to show your daily light exposure. SunSync only reads this data; it does not write anything to Health.</li>
+          <li><strong>Notifications:</strong> if you enable reminders, SunSync schedules local notifications on your device, such as first light, sunset, your vitamin D window or the end of a sun session.</li>
+          <li><strong>Location:</strong> SunSync uses your location to calculate sunrise, sunset, daylight windows and vitamin D estimates. These calculations happen on your device. To show the name of your city and the UV index, your approximate location is sent to Apple services (see section 5). The home screen widget uses the same location. Location is never used for tracking or advertising.</li>
+          <li><strong>Apple Health:</strong> with your permission, SunSync reads your <em>Time in Daylight</em> data (recorded by Apple Watch) to count your daily sun without a timer. SunSync only reads this data; it never writes anything to Health.</li>
+          <li><strong>Live Activities and widgets:</strong> the session timer on the Lock Screen and the home screen widget are generated on your device. No data is sent anywhere to display them.</li>
         </ul>
         <div class="callout">
-          <strong>Your Health data never leaves your device.</strong> Time in Daylight data read from Apple Health is processed only on your device. It is not sent to our servers, to Firebase, or to any other third party, and it is never used for advertising or marketing.
+          <strong>Your Health data never leaves your device.</strong> Time in Daylight data read from Apple Health is processed only on your device. It is not sent to our servers, to Google, to RevenueCat or to any other third party, and it is never used for advertising or marketing.
         </div>
-        <p>You can manage permissions at any time in your iPhone or iPad settings, and revoke SunSync's access to Health data in the Health app.</p>
+        <p>You can manage permissions at any time in the Settings app on your iPhone or iPad, and revoke SunSync's access to Health data in the Health app.</p>
+      </section>
+
+      <section class="section" id="weather">
+        <h3>5. Weather data</h3>
+        <p>To show the UV index and adjust vitamin D estimates for cloudy days, SunSync requests weather data from Apple's WeatherKit service. To do this, your approximate location is sent to Apple. Apple does not associate this request with your identity. The name of your city is obtained in the same way through Apple's location services.</p>
+        <p>Weather data is provided by Apple Weather. See the <a href="https://weatherkit.apple.com/legal-attribution.html" target="_blank" rel="noopener">data sources</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+      </section>
+
+      <section class="section" id="analytics">
+        <h3>6. Analytics, diagnostics and tracking</h3>
+        <p>SunSync uses Firebase, a service provided by Google, to understand app performance, stability and feature usage. Firebase may collect technical information such as device type, operating system version, app version, app usage events and crash diagnostics.</p>
+        <p><strong>Advertising identifier.</strong> SunSync asks for your permission through Apple's App Tracking Transparency prompt. If you allow it, your device's advertising identifier is shared with Google Analytics to understand how people find and use SunSync. SunSync does not show ads. If you don't allow it, the advertising identifier is not used and the app works exactly the same. You can change this at any time in Settings &gt; Privacy &amp; Security &gt; Tracking.</p>
+        <p>No data from Apple Health is ever included in analytics, crash reports or any data sent to Firebase. For more details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy information</a>.</p>
+      </section>
+
+      <section class="section" id="purchases">
+        <h3>7. Purchases and subscriptions</h3>
+        <p>SunSync Pro is purchased through the App Store and processed by Apple. SunSync never receives your payment card details.</p>
+        <p>SunSync uses RevenueCat to manage subscriptions. RevenueCat receives an anonymous app user identifier, your purchase and subscription history, and basic device and app information, so it can confirm which features you have access to. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+        <p>Subscription management, billing and refunds are handled according to Apple's systems and policies.</p>
       </section>
 
       <section class="section">
-        <h3>4. Analytics and diagnostics</h3>
-        <p>SunSync uses Firebase, a service provided by Google, for analytics and crash reporting to understand app performance, stability, and feature usage.</p>
-        <p>Firebase may collect limited technical information such as device type, operating system version, app version, app usage events, and crash diagnostics. This information is not used to identify you personally. For more details, see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy information</a>.</p>
-        <p>No data from Apple Health is ever included in analytics, crash reports, or any data sent to Firebase.</p>
-      </section>
-
-      <section class="section">
-        <h3>5. Purchases and subscriptions</h3>
-        <p>If SunSync offers optional paid features, purchases are processed by Apple through the App Store.</p>
+        <h3>8. Data sharing</h3>
+        <p>SunSync does not sell your personal information. Information is only shared with the following service providers, for the purposes described above:</p>
         <ul>
-          <li>SunSync does not receive your full payment card details.</li>
-          <li>Subscription management, billing, and refunds are handled according to Apple’s systems and policies.</li>
+          <li><strong>Apple</strong>: weather data, location names and App Store purchases,</li>
+          <li><strong>Google (Firebase)</strong>: analytics and crash diagnostics,</li>
+          <li><strong>RevenueCat</strong>: subscription management.</li>
+        </ul>
+        <p>Information may also be disclosed when required by law, or to protect the rights, safety or integrity of the app and its users.</p>
+      </section>
+
+      <section class="section" id="legal-basis">
+        <h3>9. Legal basis for processing</h3>
+        <p>If you are in the European Economic Area, the United Kingdom or Switzerland, SunSync processes your information on the following legal bases:</p>
+        <ul>
+          <li><strong>Consent:</strong> location, Apple Health data, notifications and the advertising identifier. You can withdraw your consent at any time from your device settings.</li>
+          <li><strong>Performance of a contract:</strong> processing your purchases and giving you access to SunSync Pro.</li>
+          <li><strong>Legitimate interest:</strong> analytics without the advertising identifier and crash diagnostics, to keep the app stable and improve it.</li>
         </ul>
       </section>
 
       <section class="section">
-        <h3>6. Data sharing</h3>
-        <p>SunSync does not sell your personal information.</p>
-        <p>Information may only be shared when necessary to:</p>
-        <ul>
-          <li>provide technical functionality through carefully selected service providers,</li>
-          <li>comply with legal obligations,</li>
-          <li>protect the rights, safety, or integrity of the app and its users.</li>
-        </ul>
+        <h3>10. International transfers</h3>
+        <p>Apple, Google and RevenueCat may process data outside the European Economic Area, including in the United States. These providers rely on appropriate safeguards for such transfers, such as the EU–U.S. Data Privacy Framework or the European Commission's Standard Contractual Clauses.</p>
       </section>
 
       <section class="section">
-        <h3>7. Data retention</h3>
-        <p>Data stored locally in SunSync generally remains on your device until you delete it, reset the app, or uninstall the app.</p>
-        <p>If SunSync uses any third-party service for analytics, purchases, or support, certain technical records may be retained for the period required to provide those services or comply with legal obligations.</p>
+        <h3>11. Data retention</h3>
+        <p>Data stored on your device remains there until you delete it in the app or uninstall SunSync.</p>
+        <p>Technical records held by the service providers above are kept for the period needed to provide their services or to meet legal obligations, according to their own retention policies.</p>
+      </section>
+
+      <section class="section" id="rights">
+        <h3>12. Your rights</h3>
+        <p>Depending on where you live, you have the right to access, correct, delete, restrict or object to the processing of your personal information, to data portability, and to withdraw your consent at any time.</p>
+        <p>Because the data you enter in SunSync stays on your device, you can view, change or delete it directly in the app, or remove it completely by uninstalling the app. For any other request, email <a href="mailto:sunsyncapp@gmail.com">sunsyncapp@gmail.com</a>.</p>
+        <p>You also have the right to lodge a complaint with a data protection authority. In Spain, this is the <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos (AEPD)</a>.</p>
       </section>
 
       <section class="section">
-        <h3>8. Children’s privacy</h3>
-        <p>SunSync is not directed to children under 13, and the app is not intended to knowingly collect personal information from children.</p>
+        <h3>13. Children's privacy</h3>
+        <p>SunSync is not directed to children. It does not knowingly collect personal information from children under 14, or under the minimum age required in their country.</p>
       </section>
 
       <section class="section">
-        <h3>9. Changes to this Privacy Policy</h3>
+        <h3>14. Changes to this Privacy Policy</h3>
         <p>This Privacy Policy may be updated from time to time. When changes are made, the updated version will be posted on this page with a revised <code class="inline">Last updated</code> date.</p>
       </section>
 
       <section class="section" id="contact">
-        <h3>10. Contact</h3>
-        <p>If you have questions about this Privacy Policy, you can contact:</p>
+        <h3>15. Contact</h3>
+        <p>If you have questions about this Privacy Policy or want to exercise your rights, contact:</p>
         <p><strong>Email:</strong> <a href="mailto:sunsyncapp@gmail.com">sunsyncapp@gmail.com</a></p>
       </section>
     </div>
